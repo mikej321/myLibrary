@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Raleway:wght@400;600&display=swap');
+
+:root {
+    --arvo: 'Arvo', serif;
+    --raleway: 'Raleway', sans-serif;
+    --reg-weight: 400;
+    --semi-weight: 600;
+    --bold-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: var(--raleway);
+    display: grid;
+    position: relative;
+    grid-template-areas: "header"
+                         "main"
+                         "form"
+                         "add"
+                         "footer";
+    grid-template-rows: 10rem auto auto auto 7rem;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    gap: 2rem;
+}
+
+button {
+    font-family: var(--raleway);
+}
+                        
+header {
+    display: flex;
+    max-width: 100%;
+    grid-area: header;  
+    background-color: black;
+    color: white;  
+}
+
+header > h1 {
+    font-family: var(--arvo);
+    align-self: center;
+    padding-inline: 2rem;
+    font-size: 3.8rem;
+}
+
+.myForm {
+    grid-area: form;
+    justify-self: center;
+    align-self: center;
+    visibility: hidden;
+    height: 0;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 2.5rem;
+    display: grid;
+    min-width: 30rem;
+    gap: 5rem;
+}
+
+.visible {
+    visibility: visible;
+    height: auto;
+}
+
+.addBook {
+    justify-self: center;
+    font-size: inherit;
+    background-color: darkgray;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .1s all ease-in;
+}
+
+.addBook:hover {
+    border-color: whitesmoke;
+    background-color: skyblue;
+}
+
+
+
+.formEl {
+    display: grid;
+    grid-template-columns: repeat(2, 10rem);
+    align-items: center; 
+}
+
+input[type=text],
+input[type=number] {
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.6rem;
+}
+
+input[type=checkbox] {
+    justify-self: start;
+    width: 3rem;
+    height: 3rem;
+}
+
+.add {
+    grid-area: add;
+    justify-self: center;
+    align-self: center;
+    font-size: inherit;
+    padding: 1rem 2rem;
+    background-color: darkgray;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .1s all ease-in;
+}
+
+.add:hover {
+
+    background-color: skyblue;
+}
+
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.card {
+    display: grid;
+    gap: 2rem;
+    border: 1px solid black;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+}
+
+.card > p {
+    display: grid;
+    grid-template-columns: repeat(2, 11rem);
+    line-height: 3rem;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.remove {
+    font-size: inherit;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: darkgray;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .1s all ease-in;
+}
+
+.remove:hover {
+    border: none;
+    background-color: red;
+}
+
+.change {
+    font-size: inherit;
+    padding: 1rem;
+    border: none;
+    background-color: darkgray;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .1s all ease-in;
+}
+
+.change:hover {
+    border: none;
+    background-color: green;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    height: 7rem;
+    display: grid;
+    background-color: black;
+    color: white;
+    font-size: 1.8rem;
+}
+
+footer > p {
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+}
+
