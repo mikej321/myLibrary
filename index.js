@@ -39,13 +39,6 @@ Book.prototype = {
 function bringUpForm(event) {
     event.preventDefault();
     myForm.classList.toggle('visible');
-    if (myForm.classList.contains('visible')) {
-        add.textContent = 'cancel';
-    }
-
-    if (!myForm.classList.contains('visible')) {
-        add.textContent = 'add';
-    }
 }
 
 function closeForm() {
